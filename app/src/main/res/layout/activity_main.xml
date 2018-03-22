@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".AssistantActivity">
+
+
+
+    <Button
+        android:id="@+id/assistantQueryButton"
+        style="@android:style/Widget.Holo.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_new_request" />
+
+    <Button
+        android:id="@+id/closeBtn"
+        style="@android:style/Widget.Holo.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="22dp"
+        android:text="@string/app_exit" />
+
+    <LinearLayout
+        android:id="@+id/assistantRequestsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/assistantQueryButton"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/assistantRequestsListView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/background_light"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:transcriptMode="normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>
